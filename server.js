@@ -1,8 +1,15 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import fs from 'fs';
+import cors from 'cors';
+
+
 
 const app = express();
+app.use(cors({
+  origin: 'https://livinglinked.es'
+}));
+
 app.use(bodyParser.json());
 
 // Ruta para manejar el envío de correos
